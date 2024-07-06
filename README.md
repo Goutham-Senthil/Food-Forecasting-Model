@@ -18,7 +18,7 @@ The dataset for this project is sourced from Kaggle: [Food Demand Forecasting](h
     ```
 2. Navigate to the project directory:
     ```bash
-    cd food-demand-forecasting
+    cd food-forecasting-model
     ```
 3. Install the required dependencies:
     ```bash
