@@ -14,7 +14,7 @@ The dataset for this project is sourced from Kaggle: [Food Demand Forecasting](h
 ## Installation
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/food-demand-forecasting.git
+    git clone [https://github.com/yourusername/food-demand-forecasting.git](https://github.com/Goutham-Senthil/Food-Forecasting-Model)
     ```
 2. Navigate to the project directory:
     ```bash
