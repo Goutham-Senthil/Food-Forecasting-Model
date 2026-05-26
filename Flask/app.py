@@ -1,9 +1,13 @@
+import os
+import pickle
 from flask import Flask,render_template,request, redirect, url_for
 
 app = Flask(__name__)
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+model_path = os.path.join(BASE_DIR, 'fdemand.pkl')
+with open(model_path, 'rb') as f:
+    model = pickle.load(f)
 
-import pickle
-model = pickle.load(open(r'Flask\\fdemand.pkl','rb'))
 @app.route('/')
 def hello_world():
     return render_template("homepage.html")
