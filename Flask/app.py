@@ -18,58 +18,34 @@ def login():
         return render_template("index.html")
     if request.method=="POST":
         p = request.form["hp"]
-        if(p=='y'):
-            p=1
-        if(p=='n'):
-            p=0
+        p = 1 if p=='y' else 0
         q = request.form["pr"]
-        if(q=='y'):
-            q=1
-        if(q=='n'):
-            q=0
-        r = request.form["op"]
-        s = request.form["cu"]
-        if(s=='0'):
-            s=0
-        if(s=='1'):
-            s=1
-        if(s=='2'):
-            s=2
-        if(s=='3'):
-            s=3
-        t = request.form["ccode"]
-        u = request.form["rcode"]
+        q = 1 if q=='y' else 0
+        r = float(request.form["op"])
+        s = int(request.form["cu"])
+
+        t = int(request.form["ccode"])
+        u = int(request.form["rcode"])
         v = request.form["cat"]
-        if(v=='Beverages'):
-            v=0
-        if(v=='Biryani'):
-            v=1
-        if(v=='Dessert'):
-            v=2
-        if(v=='Extras'):
-            v=3
-        if(v=='Fish'):
-            v=4
-        if(v=='Other Snacks'):
-            v=5
-        if(v=='Pasta'):
-            v=6
-        if(v=='Pizza'):
-            v=7
-        if(v=='Rice Bowl'):
-            v=8
-        if(v=='Salad'):
-            v=9
-        if(v=='Sandwich'):
-            v=10
-        if(v=='Seafood'):
-            v=11
-        if(v=='Soup'):
-            v=12
-        if(v=='Starters'):
-            v=13
+        vlookup  ={
+            'Beverages':0,
+            'Biryani':1,
+            'Dessert':2,
+            'Extras':3,
+            'Fish':4,
+            'Other Snacks':5,
+            'Pasta':6,
+            'Pizza':7,
+            'Rice Bowl':8,
+            'Salad':9,
+            'Sandwich':10,
+            'Seafood':11,
+            'Soup':12,
+            'Starters':13
+        }
+        v = vlookup[v]
         
-        w = [[int(t),int(u),float(r),int(v),int(s),int(q),int(p)]]
+        w = [t,u,r,v,s,q,p]
         output = model.predict(w)
         print(output)
         
