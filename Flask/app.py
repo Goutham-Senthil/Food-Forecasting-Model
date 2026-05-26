@@ -3,7 +3,7 @@ from flask import Flask,render_template,request, redirect, url_for
 app = Flask(__name__)
 
 import pickle
-model = pickle.load(open(r'C:/Users/zains/Flask/fdemand.pkl','rb'))
+model = pickle.load(open(r'Flask\\fdemand.pkl','rb'))
 @app.route('/')
 def hello_world():
     return render_template("homepage.html")
