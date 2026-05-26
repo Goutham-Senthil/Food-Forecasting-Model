@@ -17,10 +17,8 @@ def login():
     if request.method=="GET":
         return render_template("index.html")
     if request.method=="POST":
-        p = request.form["hp"]
-        p = 1 if p=='y' else 0
-        q = request.form["pr"]
-        q = 1 if q=='y' else 0
+        p = 1 if request.form["hp"] == 'y' else 0
+        q = 1  if request.form["pr"] == 'y' else 0
         r = float(request.form["op"])
         s = int(request.form["cu"])
 
@@ -50,8 +48,6 @@ def login():
         print(output)
         
         return render_template("index.html",y="The predicted number of orders is "+str(output[0]))
-        #print(p)
-        return render_template("index.html",y=p)
 
 # @app.route('/user')
 # def User():
