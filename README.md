@@ -1,7 +1,7 @@
 # Food Demand Forecasting Model
 
 ## Overview
-This project aims to forecast the demand for food items using a machine learning model. The model is trained on a dataset from Kaggle and deployed using a Flask web application to provide an interactive user experience.
+This project aims to forecast the demand for food items using a Decision Tree Regression model. The model is trained on a dataset from Kaggle and deployed using a Flask web application to provide an interactive user experience.
 
 ## Dataset
 The dataset for this project is sourced from Kaggle: [Food Demand Forecasting](https://www.kaggle.com/datasets/kannanaikkal/food-demand-forecasting). It includes information on the week, center ID, meal ID, prices, promotions, and number of orders.
